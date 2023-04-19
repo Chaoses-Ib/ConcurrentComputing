@@ -1,7 +1,12 @@
 # [Concurrent Computing](Concurrent%20Computing.md)
 ## Concurrent Computing
+- Threads
+- Coroutines
+- [Async/await](Concurrent/Async-await.md)
 
 ## Parallel Computing
+- Open Multi-Processing
+- Message Passing Interface
 
 ## Distributed Computing
 - [Inter-Process Communication](Distributed/IPC/README.md)

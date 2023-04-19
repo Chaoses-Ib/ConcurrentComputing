@@ -1,4 +1,6 @@
 # Concurrent Computing
+**Concurrent programming**, where different parts of a program execute independently, and **parallel programming**, where different parts of a program execute at the same time, are becoming increasingly important as more computers take advantage of their multiple processors.[^rust]
+
 <details><summary>Terminology</summary>
 
 Concurrent vs simultaneous[^perfmatrix]:
@@ -14,5 +16,6 @@ Concurrent, parallel vs distributed computing:
 
 [^concurrent]: [Concurrent computing - Wikipedia](https://en.wikipedia.org/wiki/Concurrent_computing)
 [^parallel]: [Parallel computing - Wikipedia](https://en.wikipedia.org/wiki/Parallel_computing)
+[^rust]: [Fearless Concurrency - The Rust Programming Language](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 [^perfmatrix]: [Concurrent Users vs Simultaneous Users - LoadRunner | JMeter |](https://www.perfmatrix.com/concurrent-users-vs-simultaneous-users/)
 [^pediaa]: [What is the Difference Between Parallel and Distributed Computing - Pediaa.Com](https://pediaa.com/what-is-the-difference-between-parallel-and-distributed-computing/)
