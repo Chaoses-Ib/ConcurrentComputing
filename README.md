@@ -1,6 +1,9 @@
 # [Concurrent Computing](Concurrent%20Computing.md)
 ## Concurrent Computing
-- Threads
+- [→Threads](https://github.com/Chaoses-Ib/Linux/blob/main/Kernel/Processes/Threads.md)
+- [Atomicity](Concurrent/Atomicity.md)
+- [Locks](Concurrent/Locks/README.md)
+  - [Spinning](Concurrent/Locks/Spinning.md)
 - Coroutines
 - [Async/await](Concurrent/Async-await.md)
 
