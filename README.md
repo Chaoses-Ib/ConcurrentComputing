@@ -8,6 +8,7 @@
   - [Spinning](Concurrent/Locks/Spinning.md)
 - [Condition Variables](Concurrent/Condition%20Variables.md)
 - [Semaphores](Concurrent/Semaphores.md)
+- [Transactional Memory](Concurrent/Transactional%20Memory.md)
 
 ## Parallel Computing
 - Open Multi-Processing
