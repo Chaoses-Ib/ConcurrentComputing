@@ -10,9 +10,36 @@
 - [Semaphores](Concurrent/Semaphores.md)
 - [Transactional Memory](Concurrent/Transactional%20Memory.md)
 
-## Parallel Computing
-- Open Multi-Processing
-- Message Passing Interface
+## [Parallel Computing](Parallel/README.md)
+- [Algorithms](Parallel/Algorithms/README.md)
+  - [Loop Dependency](Parallel/Algorithms/Loop%20Dependency.md)
+- Programming
+  - [Programming Models](Parallel/Programming/Models.md)
+  - [Open Multi-Processing](Parallel/Programming/OpenMP/README.md)
+    - [Base Languages](Parallel/Programming/OpenMP/Base%20Languages.md)
+    - [Data Environment](Parallel/Programming/OpenMP/Data/README.md)
+      - [Reduction Clauses and Directives](Parallel/Programming/OpenMP/Data/Reduction.md)
+    - [Parallelism Generation and Control](Parallel/Programming/OpenMP/Parallelism/README.md)
+    - [Work-Distribution Constructs](Parallel/Programming/OpenMP/Distribution/README.md)
+      - [Worksharing-Loop Constructs](Parallel/Programming/OpenMP/Distribution/Worksharing-Loop.md)
+    - [Synchronization Constructs and Clauses](Parallel/Programming/OpenMP/Synchronization/README.md)
+    - Runtime Library Routines
+      - [Lock Routines](Parallel/Programming/OpenMP/Library/Lock.md)
+      - [Timing Routines](Parallel/Programming/OpenMP/Library/Timing.md)
+  - [Message Passing Interface](Parallel/Programming/MPI/README.md)
+    - [Point-to-Point Communication](Parallel/Programming/MPI/Point-to-Point%20Communication/README.md)
+    - [Collective Communication](Parallel/Programming/MPI/Collective%20Communication/README.md)
+    - [Environment Management](Parallel/Programming/MPI/Environment%20Management/README.md)
+    - [Process Initialization, Creation, and Management](Parallel/Programming/MPI/Process%20Management/README.md)
+- Computers
+  - [Computer Architectures](Parallel/Computers/Architectures.md)
+  - [Single-Instruction Multiple-Data](Parallel/Computers/SIMD/README.md)
+  - [Compute Unified Device Architecture](Parallel/Computers/CUDA/README.md)
+  - [Operating Systems](Parallel/Computers/Operating%20Systems.md)
+  - [中国国家超级计算中心](Parallel/Computers/中国国家超级计算中心.md)
+- Performance
+  - [Performance Metrics](Parallel/Performance/Metrics.md)
+  - [Benchmarks](Parallel/Performance/Benchmarks.md)
 
 ## Distributed Computing
 - [Inter-Process Communication](Distributed/IPC/README.md)
