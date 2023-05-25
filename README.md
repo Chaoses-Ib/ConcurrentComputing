@@ -1,11 +1,13 @@
 # [Concurrent Computing](Concurrent%20Computing.md)
 ## Concurrent Computing
+- [Coroutines](Concurrent/Coroutines.md)
+- [Async/await](Concurrent/Async-await.md)
 - [→Threads](https://github.com/Chaoses-Ib/Linux/blob/main/Kernel/Processes/Threads.md)
 - [Atomicity](Concurrent/Atomicity.md)
 - [Locks](Concurrent/Locks/README.md)
   - [Spinning](Concurrent/Locks/Spinning.md)
-- Coroutines
-- [Async/await](Concurrent/Async-await.md)
+- [Condition Variables](Concurrent/Condition%20Variables.md)
+- [Semaphores](Concurrent/Semaphores.md)
 
 ## Parallel Computing
 - Open Multi-Processing

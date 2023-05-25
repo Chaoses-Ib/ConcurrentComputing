@@ -7,5 +7,10 @@ An **indeterminate** program consists of one or more race conditions; the output
 
 To avoid these problems, threads should use some kind of **mutual exclusion** primitives; doing so guarantees that only a single thread ever enters a critical section, thus avoiding races, and resulting in deterministic program outputs.[^three]
 
+## Synchronization
+[Wikipedia](https://en.wikipedia.org/wiki/Synchronization_(computer_science))
+
+**Synchronization** is a mechanism which ensures that two or more concurrent processes or threads do not simultaneously execute some particular program segment known as critical section.
+
 
 [^three]: Operating Systems: Three Easy Pieces
