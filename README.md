@@ -5,10 +5,14 @@
 - [→Threads](https://github.com/Chaoses-Ib/Linux/blob/main/Kernel/Processes/Threads.md)
 - [Atomicity](Concurrent/Atomicity.md)
 - [Locks](Concurrent/Locks/README.md)
+  - [Readers-writer Locks](Concurrent/Locks/Readers-writer%20Locks.md)
   - [Spinning](Concurrent/Locks/Spinning.md)
 - [Condition Variables](Concurrent/Condition%20Variables.md)
 - [Semaphores](Concurrent/Semaphores.md)
 - [Transactional Memory](Concurrent/Transactional%20Memory.md)
+- Problems
+  - [Producer-consumer Problem](Concurrent/Problems/Producer-consumer.md)
+  - [Dining Philosophers Problem](Concurrent/Problems/Dining%20Philosophers.md)
 
 ## [Parallel Computing](Parallel/README.md)
 - [Algorithms](Parallel/Algorithms/README.md)
