@@ -12,5 +12,10 @@ To avoid these problems, threads should use some kind of **mutual exclusion** pr
 
 **Synchronization** is a mechanism which ensures that two or more concurrent processes or threads do not simultaneously execute some particular program segment known as critical section.
 
+## Information sources
+Books:
+- Operating Systems: Three Easy Pieces (Part II)
+- The Little Book of Semaphores
+
 
 [^three]: Operating Systems: Three Easy Pieces
