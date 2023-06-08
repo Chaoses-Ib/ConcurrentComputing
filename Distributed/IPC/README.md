@@ -13,7 +13,7 @@ Approaches:
   - Named pipes
 - Shared memory
 - Message passing
-  - Remote procedure call
+  - [Remote procedure calls](RPC/README.md)
 - Memory-mapped files
 
 ## Pipes
@@ -26,9 +26,6 @@ Rust:
 [Wikipedia](https://en.wikipedia.org/wiki/Unix_domain_socket)
 
 Windows starts to support Unix domain sockets from Windows 17063, released on 2018-04-10. See [AF_UNIX comes to Windows - Windows Command Line](https://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/) for details.
-
-## Remote procedure call
-- [→gRPC](https://github.com/Chaoses-Ib/Networks/blob/main/Application/HTTP/gRPC.md)
 
 ## Message queues
 - [ZeroMQ](https://zeromq.org/) ([GitHub](https://github.com/zeromq/libzmq))
