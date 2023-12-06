@@ -12,4 +12,6 @@
 
 ![](images/README/networks.png)
 
-[【ERC-20 V.S TRC-20】ERC20/TRC20傳輸USDT哪種優勢更高? | 富投玩家](https://bitcoinmale.com/erc20-trc20/)
+[USDT充币提币ERC20、TRC20、Omni如何选择？有啥区别？ - 知乎](https://zhuanlan.zhihu.com/p/357225748)
+
+[7种主流公链的网络协议-Bitget Wallet](https://www.bitget.com/zh-CN/web3/academy/7-network-protocols-of-major-blockchains)
