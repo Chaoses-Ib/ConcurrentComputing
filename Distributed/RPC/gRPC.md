@@ -103,6 +103,11 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
 ### Rust
 - [tonic: A native gRPC client & server implementation with async/await support.](https://github.com/hyperium/tonic)
   - [tonic-web: grpc-web protocol translation for tonic services.](https://docs.rs/crate/tonic-web/latest)
+
+  - [concurrent use of client - Issue #285 - hyperium/tonic](https://github.com/hyperium/tonic/issues/285)
+
+    `client.clone()`
+
 - [grpc-rs: The gRPC library for Rust built on C Core library and futures](https://github.com/tikv/grpc-rs)
 - [grpc-rust: Rust implementation of gRPC](https://github.com/stepancheg/grpc-rust)
 
