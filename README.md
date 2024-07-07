@@ -49,7 +49,7 @@
   - [Performance Metrics](Parallel/Performance/Metrics.md)
   - [Benchmarks](Parallel/Performance/Benchmarks.md)
 
-## Distributed Computing
+## [Distributed Computing](Distributed/README.md)
 - [Inter-Process Communication](Distributed/IPC/README.md)
 - [Remote Procedure Calls](Distributed/RPC/README.md)
   - [gRPC](Distributed/RPC/gRPC.md)
