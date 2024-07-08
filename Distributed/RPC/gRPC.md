@@ -1,6 +1,8 @@
 # [gRPC](https://grpc.io/)
 [GitHub](https://github.com/grpc/grpc)
 
+[Core concepts, architecture and lifecycle | gRPC](https://grpc.io/docs/what-is-grpc/core-concepts/)
+
 Supported channels:
 - HTTP/2
 - HTTP: [gRPC-Web](https://chromium.googlesource.com/external/github.com/grpc/grpc/+/v1.12.0/doc/PROTOCOL-WEB.md)
@@ -13,6 +15,13 @@ Supported channels:
 [Awesome gRPC: A curated list of useful resources for gRPC](https://github.com/grpc-ecosystem/awesome-grpc)
 
 [Showcase | gRPC](https://grpc.io/showcase/)
+
+## Ordering
+> gRPC guarantees message ordering within an individual RPC call.
+
+[How does grpc guarantee the request (and response) order?](https://groups.google.com/g/grpc-io/c/AsfrHhsMZJA)
+- > As far as I understand, we give no guarantees about the order in which messages will be delivered for separate calls, even on the same channel. Even if it did, the calls could be handled by different threads on the server, which could arbitrarily interleave and execute their handling code in any order.
+- > If you need ordering you could use a grpc stream, which guarantees in order delivery of each message sent on the stream.
 
 ## Sessions
 gRPC is stateless. gRPC services are transient.
