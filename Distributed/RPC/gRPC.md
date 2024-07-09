@@ -120,6 +120,79 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
 - [grpc-rs: The gRPC library for Rust built on C Core library and futures](https://github.com/tikv/grpc-rs)
 - [grpc-rust: Rust implementation of gRPC](https://github.com/stepancheg/grpc-rust)
 
+Build:
+- One crate
+
+  ```toml
+  [package]
+  name = "plugin"
+  version = "0.1.0"
+  edition = "2021"
+
+  [[bin]]
+  name = "plugin-server"
+  path = "src/server.rs"
+
+  [[bin]]
+  name = "plugin-client"
+  path = "src/client.rs"
+
+  [dependencies]
+  prost = "0.12"
+  tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+  tonic = "0.11"
+  ...server_deps
+  ...client_deps
+
+  [build-dependencies]
+  tonic-build = "0.11"
+  ```
+
+- Three crates
+
+  `plugin`:
+  ```toml
+  [package]
+  name = "plugin"
+  version = "0.1.0"
+  edition = "2021"
+
+  [dependencies]
+  prost = "0.12"
+  tonic = "0.11"
+
+  [build-dependencies]
+  tonic-build = "0.11"
+  ```
+
+  `plugin-server`:
+  ```toml
+  [package]
+  name = "plugin-server"
+  version = "0.1.0"
+  edition = "2021"
+
+  [dependencies]
+  plugin = { path = "../plugin" }
+  tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+  tonic = "0.11"
+  ...server_deps
+  ```
+
+  `plugin-client`:
+  ```toml
+  [package]
+  name = "plugin-client"
+  version = "0.1.0"
+  edition = "2021"
+
+  [dependencies]
+  plugin = { path = "../plugin" }
+  tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+  tonic = "0.11"
+  ...client_deps
+  ```
+
 ## Tools
 GUI:
 - [Postman](https://www.postman.com/)
