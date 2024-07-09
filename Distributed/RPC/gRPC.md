@@ -63,6 +63,9 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
 - [gRPC for .NET](https://github.com/grpc/grpc-dotnet) ([Grpc.Net.Client](https://www.nuget.org/packages/Grpc.Net.Client))
 
   [Use gRPC client with .NET Standard 2.0 | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/grpc/netstandard)
+  - .NET Framework: HTTP/2 support is only available on Windows 11+ and must be over TLS.
+
+    [Grpc.Net.Client does not support HTTP/2 on Windows 10 with NET Framework (There is no replacement for Grpc.Core.) - Issue #8094 - dotnet/core](https://github.com/dotnet/core/issues/8094)
 
   Running a server requires ASP.NET Core Runtime:
   - [Implementing a grpc server in .net standard class library · Issue #1419 · grpc/grpc-dotnet](https://github.com/grpc/grpc-dotnet/issues/1419)
@@ -70,6 +73,8 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
   - [Support for MAUI runtimes in ASP.NET Core? · Issue #35077 · dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues/35077)
 
 - [gRPC C#](https://github.com/grpc/grpc/tree/master/src/csharp) ([Grpc.Core](https://www.nuget.org/packages/Grpc.Core)) (discontinued)
+
+  [Please continue to support grpc.core because there is no alternative for Windows 10 using the NET Framework - Issue #32719 - grpc/grpc](https://github.com/grpc/grpc/issues/32719)
 
   尽管 [Grpc.Core.Xamarin](https://www.nuget.org/packages/Grpc.Core.Xamarin) 支持 Android 和 iOS，但它只支持 Xamarin，不支持 MAUI，并且 Android 每个 ABI 下的 lib 体积都在 100 MiB 左右，远超桌面端的 10 MiB。由于包体积过大，从 v2.45 开始的包无法再上传到 NuGet 上，只能手动下载：
   - [Grpc.Core.Xamarin NuGet packages missing starting from v2.45.x · Issue #30071 · grpc/grpc](https://github.com/grpc/grpc/issues/30071)
