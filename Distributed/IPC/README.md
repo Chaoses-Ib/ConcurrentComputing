@@ -15,12 +15,60 @@ Approaches:
 - Message passing
   - [Remote procedure calls](../RPC/README.md)
 - Memory-mapped files
+- Windows: [Local Inter-Process Communication](https://en.wikipedia.org/wiki/Local_Inter-Process_Communication) (LPC/ALPC)
+
+[IPC-Bench: :racehorse: Benchmarks for Inter-Process-Communication Techniques](https://github.com/goldsborough/ipc-bench)
+
+## Memory-mapped files
+- [cloudflare/mmap-sync: Rust library for concurrent data access, using memory-mapped files, zero-copy deserialization, and wait-free synchronization.](https://github.com/cloudflare/mmap-sync)
+
+  [Every request, every microsecond: scalable machine learning at Cloudflare](https://blog.cloudflare.com/scalable-machine-learning-at-cloudflare)
+  > A read operation through the **`Synchronizer`** performs zero-copy deserialization and returns a "guarded" **`Result`** encapsulating a reference to the Rust struct using RAII design pattern. This operation also increments the atomic counter of active readers using the struct. Once the **`Result`** is out of scope, the **`Synchronizer`** decrements the number of readers.
+
+  Linux, Windows.
+
+## Shared memory
+- [Eclipse iceoryx: True zero-copy inter-process-communication](https://github.com/eclipse-iceoryx/iceoryx)
+
+  vcpkg
+
+  Rust: [iceoryx-rs](https://github.com/eclipse-iceoryx/iceoryx-rs)
+
+  - Eclipse iceoryx2
+
+C/C++:
+- [eCAL: enhanced Communication Abstraction Layer. A high performance publish-subscribe, client-server cross-plattform middleware.](https://github.com/eclipse-ecal/ecal)
+
+  vcpkg
+
+- [Shadesmar: Fast C++ IPC using shared memory](https://github.com/Squadrick/shadesmar) ([r/cpp](https://www.reddit.com/r/cpp/comments/qzri9j/shadesmar_fast_c_ipc_using_shared_memory/))
+
+- [Flow-IPC: Modern C++ toolkit for high-speed inter-process communication (IPC)](https://github.com/Flow-IPC/ipc)
+
+- [AlephZero](https://github.com/alephzero/alephzero)
+
+- [mutouyun/cpp-ipc: C++ IPC Library: A high-performance inter-process communication using shared memory on Linux/Windows.](https://github.com/mutouyun/cpp-ipc)
+
+  vcpkg
+
+- [microsoft/IPC: IPC is a C++ library that provides inter-process communication using shared memory on Windows. A .NET wrapper is available which allows interaction with C++ as well.](https://github.com/microsoft/IPC) (discontinued)
+
+Rust:
+- shmem-ipc
+
+No messages:
+- [shared\_memory: A Rust wrapper around native shared memory for Linux and Windows](https://github.com/elast0ny/shared_memory)
+
+- [boostorg/interprocess: Boost.org interprocess module](https://github.com/boostorg/interprocess)
+
+  [Sharing memory between processes](https://www.boost.org/doc/libs/1_84_0/doc/html/interprocess/sharedmemorybetweenprocesses.html)
 
 ## Pipes
 Rust:
 - [std::process::Stdio](https://doc.rust-lang.org/std/process/struct.Stdio.html)
 - [os_pipe.rs: a cross-platform library for opening OS pipes in Rust](https://github.com/oconnor663/os_pipe.rs)
 - [tokio::net](https://docs.rs/tokio/latest/tokio/net/index.html)
+- [Hyper-named-pipe: Exposes a HTTP interface over Tokio's Named Pipes implementation through a Hyper Connection interface.](https://github.com/fussybeaver/hyper-named-pipe)
 
 ## Unix domain sockets
 [Wikipedia](https://en.wikipedia.org/wiki/Unix_domain_socket)
@@ -44,14 +92,66 @@ Windows starts to support Unix domain sockets from Windows 17063, released on 20
   - [nng-rs](https://gitlab.com/neachdainn/nng-rs)
   - [runng](https://github.com/jeikabu/runng)
   - [nanomsg.rs: Nanomsg library for Rust](https://github.com/thehydroimpulse/nanomsg.rs) (discontinued)
-- [ipc-channel: A multiprocess drop-in replacement for Rust channels](https://github.com/servo/ipc-channel)
+
+- [Eclipse iceoryx2: True zero-copy inter-process-communication in pure Rust](https://github.com/eclipse-iceoryx/iceoryx2) ([Website](https://iceoryx.io/), [Docs.rs](https://docs.rs/iceoryx2/))
+
+  - Shared memory
+  - Cycle time
+
+  ```mermaid
+  gantt
+      title Latency (in ns) - 64b payload
+      dateFormat X
+      axisFormat %s
+
+      section iceoryx2
+      240 : 0, 240
+      section iceoryx
+      1000 : 0, 1000
+      section MQueue
+      700 : 0, 700
+      section UDS
+      1500 : 0, 1500
+  ```
+
+  ```mermaid
+  gantt
+      title Latency (in ns) - 64kb payload
+      dateFormat X
+      axisFormat %s
+
+      section iceoryx2
+      240 : 0, 240
+      section iceoryx
+      1000 : 0, 1000
+      section MQueue
+      14000 : 0, 14000
+      section UDS
+      23000 : 0, 23000
+  ```
+
+  - [Cannot build for target `i686-pc-windows-msvc` - Issue #235](https://github.com/eclipse-iceoryx/iceoryx2/issues/235)
+
+- [servo/ipc-channel: A multiprocess drop-in replacement for Rust channels](https://github.com/servo/ipc-channel)
+  - OS
+    - Unix: Unix domain sockets
+    - Windows: named pipes
+      - [Use ALPC on Windows - Issue #211](https://github.com/servo/ipc-channel/issues/211)
+
+    [How about using shared-memory to implement ipc-channel. - Issue #128](https://github.com/servo/ipc-channel/issues/128)
+  
+  - [Channel between 64-bit and 32-bit process - Issue #304](https://github.com/servo/ipc-channel/issues/304)
+    - [YaLTeR/ipc-channel at 64-to-32-bits](https://github.com/YaLTeR/ipc-channel/tree/64-to-32-bits)
+
+  - [ipc-rpc](https://github.com/Xaeroxe/ipc-rpc)
+
 - [Interprocess: Multifunctional cross-platform interprocess communication toolkit for Rust.](https://github.com/kotauskas/interprocess)
 
   - Unix: Unix domain sockets, FIFO files, unnamed pipes.
   - Windows: named pipes, unnamed pipes.
 - [shmem-ipc: Untrusted IPC with maximum performance and minimum latency. On Rust, on Linux.](https://github.com/diwic/shmem-ipc)
 
-  Shared memory.
+  Linux: Shared memory
 - [BUS/RT: Modern, fast, Rust-native IPC broker](https://github.com/alttch/busrt)
 
   Unix domain sockets, TCP sockets.

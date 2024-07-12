@@ -118,9 +118,21 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
 - [tonic: A native gRPC client & server implementation with async/await support.](https://github.com/hyperium/tonic)
   - [tonic-web: grpc-web protocol translation for tonic services.](https://docs.rs/crate/tonic-web/latest)
 
+  - Unix domain sockets: [examples/src/uds](https://github.com/hyperium/tonic/tree/master/examples/src/uds)
+
+    [Unix Domain Socket on Windows for gRPC connection - help - The Rust Programming Language Forum](https://users.rust-lang.org/t/unix-domain-socket-on-windows-for-grpc-connection/112077)
+
+  - Named pipe: [How to implement an async read/write incoming stream with tokio named pipe? - Issue #1518 - hyperium/tonic](https://github.com/hyperium/tonic/issues/1518)
+
+    [Helper struct/wrapper for a stream of named pipe connections - Issue #6591 - tokio-rs/tokio](https://github.com/tokio-rs/tokio/issues/6591)
+
   - [concurrent use of client - Issue #285 - hyperium/tonic](https://github.com/hyperium/tonic/issues/285)
 
     `client.clone()`
+  
+  - [tonic-rpc: Build RPCs on top of the tonic gRPC library by defining your types in Rust instead of proto.](https://github.com/adamrk/tonic-rpc) (inactive)
+
+    > This means that you can get all the benefits of tonic while using regular Rust types and without needing to use proto files or build scripts. Of course, this comes at the sacrifice of interoperability.
 
 - [grpc-rs: The gRPC library for Rust built on C Core library and futures](https://github.com/tikv/grpc-rs)
 - [grpc-rust: Rust implementation of gRPC](https://github.com/stepancheg/grpc-rust)
