@@ -125,6 +125,14 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
 - [grpc-rs: The gRPC library for Rust built on C Core library and futures](https://github.com/tikv/grpc-rs)
 - [grpc-rust: Rust implementation of gRPC](https://github.com/stepancheg/grpc-rust)
 
+Notes:
+- `Client::connect()` is async and fallible.
+
+  Workaround:
+  ```rust
+  Client::new(tonic::transport::Endpoint::from_static("http://[::1]:50051").connect_lazy())
+  ```
+
 Build:
 - One crate
 
