@@ -9,6 +9,7 @@ RPCs are a form of inter-process communication (IPC), in that different processe
 - [gRPC](gRPC.md)
 
   [How Netflix increased developer productivity and defeated the thundering herd with gRPC](https://www.cncf.io/case-studies/netflix/)
+- [Connect](Connect.md)
 - [Apache Thrift](https://thrift.apache.org/)
 - [Cap'n Proto](https://capnproto.org/)
 - [Apache Avro](https://avro.apache.org/)

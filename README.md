@@ -53,6 +53,7 @@
 - [Inter-Process Communication](Distributed/IPC/README.md)
 - [Remote Procedure Calls](Distributed/RPC/README.md)
   - [gRPC](Distributed/RPC/gRPC.md)
+  - [Connect](Distributed/RPC/Connect.md)
   - [JSON-RPC](Distributed/RPC/JSON-RPC.md)
 - [Distributed Hash Table](Distributed/Distributed%20Hash%20Table.md)
 
