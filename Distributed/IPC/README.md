@@ -63,6 +63,11 @@ No messages:
 
   [Sharing memory between processes](https://www.boost.org/doc/libs/1_84_0/doc/html/interprocess/sharedmemorybetweenprocesses.html)
 
+Applications:
+- Sensor data
+
+  很多传感器的驱动是 C++ 写的，对 C++ 的支持比较重要。
+
 ## Pipes
 Rust:
 - [std::process::Stdio](https://doc.rust-lang.org/std/process/struct.Stdio.html)
@@ -79,6 +84,11 @@ Windows starts to support Unix domain sockets from Windows 17063, released on 20
 - [ZeroMQ](https://zeromq.org/) ([GitHub](https://github.com/zeromq/libzmq))
 - [nanomsg](https://nanomsg.org/) ([GitHub](https://github.com/nanomsg/nanomsg))
 - [NNG](https://nng.nanomsg.org/) ([GitHub](https://github.com/nanomsg/nng))
+- [Zenoh: zenoh unifies data in motion, data in-use, data at rest and computations. It carefully blends traditional pub/sub with geo-distributed storages, queries and computations, while retaining a level of time and space efficiency that is well beyond any of the mainstream stacks.](https://github.com/eclipse-zenoh/zenoh)
+  - TCP/UDP/QUIC/HTTP, shared memory
+  - [DORA: DORA (Dataflow-Oriented Robotic Architecture) is middleware designed to streamline and simplify the creation of AI-based robotic applications. It offers low latency, composable, and distributed dataflow capabilities. Applications are modeled as directed graphs, also referred to as pipelines.](https://github.com/dora-rs/dora)
+
+    > Communication between nodes is handled with shared memory on a same machine and TCP on distributed machines. Our shared memory implementation tracks messages across processes and discards them when obsolete. Shared memory slots are cached to avoid new memory allocation.
 
 [Differences between nanomsg and ZeroMQ](https://nanomsg.org/documentation-zeromq.html)
 
@@ -97,6 +107,16 @@ Windows starts to support Unix domain sockets from Windows 17063, released on 20
 
   - Shared memory
   - Cycle time
+  - Languages: Rust, C/C++
+    - [Can I use cpp programmer as a publisher and rust program as a subscriber? - Discussion #480](https://github.com/eclipse-iceoryx/iceoryx2/discussions/480)
+      - [Apart from the memory layout, iceoryx2 also requires the type name to be the same. - Issue #481](https://github.com/eclipse-iceoryx/iceoryx2/issues/481)
+  - [`is_compatible_to()`](https://github.com/eclipse-iceoryx/iceoryx2/blob/main/iceoryx2/src/service/static_config/message_type_details.rs#L128)
+  - 32-bit
+    - ~~[Introduce `atomic` type for iceoryx - Issue #200](https://github.com/eclipse-iceoryx/iceoryx2/issues/200)~~
+    - ~~[Cannot build for target `i686-pc-windows-msvc` - Issue #235](https://github.com/eclipse-iceoryx/iceoryx2/issues/235)~~
+    - [Fully support C and C++ Bindings on 32 Bit Architectures - Issue #262](https://github.com/eclipse-iceoryx/iceoryx2/issues/262)
+    - Cross 32/64-bit communication?
+      - [Interoperability between 32-bit and 64-bit applications. - Issue #402](https://github.com/eclipse-iceoryx/iceoryx2/issues/402)
 
   ```mermaid
   gantt
@@ -129,8 +149,6 @@ Windows starts to support Unix domain sockets from Windows 17063, released on 20
       section UDS
       23000 : 0, 23000
   ```
-
-  - [Cannot build for target `i686-pc-windows-msvc` - Issue #235](https://github.com/eclipse-iceoryx/iceoryx2/issues/235)
 
 - [servo/ipc-channel: A multiprocess drop-in replacement for Rust channels](https://github.com/servo/ipc-channel)
   - OS
