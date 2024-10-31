@@ -36,8 +36,11 @@ service FullDuplex {
 }
 ```
 
+虽然用这种方法实现反向调用有些 hacky，但这样做也有一个好处：方便追踪调用链。
+
 gRPC-Web 目前尚不支持 bidirectional streaming。
 
+[protocol buffers - Protobuf RPC callbacks - Stack Overflow](https://stackoverflow.com/questions/35648518/protobuf-rpc-callbacks)
 
 ## Implementations
 [Supported languages | gRPC](https://grpc.io/docs/languages/)
@@ -123,6 +126,7 @@ gRPC-Web 目前尚不支持 bidirectional streaming。
     [Unix Domain Socket on Windows for gRPC connection - help - The Rust Programming Language Forum](https://users.rust-lang.org/t/unix-domain-socket-on-windows-for-grpc-connection/112077)
 
   - Named pipe: [How to implement an async read/write incoming stream with tokio named pipe? - Issue #1518 - hyperium/tonic](https://github.com/hyperium/tonic/issues/1518)
+    - async-stream: [catalinsh/tonic-named-pipe-example: Basic Tonic (gRPC) example using Windows Named Pipes for communication](https://github.com/catalinsh/tonic-named-pipe-example)
 
     [Helper struct/wrapper for a stream of named pipe connections - Issue #6591 - tokio-rs/tokio](https://github.com/tokio-rs/tokio/issues/6591)
 
