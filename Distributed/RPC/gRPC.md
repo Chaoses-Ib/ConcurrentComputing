@@ -16,6 +16,9 @@ Supported channels:
 
 [Showcase | gRPC](https://grpc.io/showcase/)
 
+## Channels
+[Custom Name Resolution | gRPC](https://grpc.io/docs/guides/custom-name-resolution/)
+
 ## Ordering
 > gRPC guarantees message ordering within an individual RPC call.
 
@@ -41,6 +44,45 @@ service FullDuplex {
 gRPC-Web 目前尚不支持 bidirectional streaming。
 
 [protocol buffers - Protobuf RPC callbacks - Stack Overflow](https://stackoverflow.com/questions/35648518/protobuf-rpc-callbacks)
+
+## [Reflection](https://grpc.io/docs/guides/reflection/)
+
+## [Auth](https://grpc.io/docs/guides/auth/)
+- Metadata
+  - `authorization`
+
+  Rust: [tonic/examples/src/authentication/server.rs at master - hyperium/tonic](https://github.com/hyperium/tonic/blob/master/examples/src/authentication/server.rs)
+  ```rust
+  #[derive(Clone)]
+  pub struct AuthInterceptor {
+      pub auth: Option<Arc<tonic::metadata::MetadataValue<tonic::metadata::Ascii>>>,
+  }
+
+  impl AuthInterceptor {
+      pub fn new(auth: Option<&str>) -> Self {
+          Self {
+              auth: auth.map(|auth| auth.parse().unwrap()).map(Arc::new),
+          }
+      }
+  }
+
+  impl tonic::service::Interceptor for AuthInterceptor {
+      fn call(&mut self, mut req: tonic::Request<()>) -> tonic::Result<tonic::Request<()>> {
+          if let Some(auth) = &self.auth {
+              req.metadata_mut()
+                  .insert("authorization", auth.as_ref().clone());
+          }
+          Ok(req)
+      }
+  }
+
+  client: MyServiceClient<
+      tonic::service::interceptor::InterceptedService<
+          tonic::transport::channel::Channel,
+          AuthInterceptor,
+      >,
+  >,
+  ```
 
 ## Implementations
 [Supported languages | gRPC](https://grpc.io/docs/languages/)
@@ -148,6 +190,10 @@ Notes:
   ```rust
   Client::new(tonic::transport::Endpoint::from_static("http://[::1]:50051").connect_lazy())
   ```
+
+- Interceptor: [tonic/examples/src/interceptor/client.rs at master - hyperium/tonic](https://github.com/hyperium/tonic/blob/master/examples/src/interceptor/client.rs)
+
+  [Storing `with_interceptor` clients is substantially more challenging in 0.5 - Issue #730 - hyperium/tonic](https://github.com/hyperium/tonic/issues/730)
 
 Build:
 - One crate
