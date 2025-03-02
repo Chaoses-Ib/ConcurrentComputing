@@ -5,6 +5,15 @@
 
 [Updates v. upgrades: what's the difference? - E-N Computers](https://www.encomputers.com/2023/06/updates-upgrades/)
 
+Components/Steps:
+- Check for updates
+- Confirmation
+- Download
+- Update
+  - Uninstall + Install
+  - Shutdown + Patch
+- Restart
+
 ## Deployment strategies
 - Reckless deployment
 
