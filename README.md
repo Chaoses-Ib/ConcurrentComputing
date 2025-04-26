@@ -59,6 +59,7 @@
 - [Distributed Hash Table](Distributed/Distributed%20Hash%20Table.md)
 - [Software Deployment](Distributed/Deployment/README.md)
   - [Software Update](Distributed/Deployment/Update/README.md)
+- [Load Balancing](Distributed/Balancing/README.md)
 
 ## [Blockchains](Blockchains/README.md)
 - [Currencies](Blockchains/Currencies/README.md)
