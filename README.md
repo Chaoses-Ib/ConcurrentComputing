@@ -60,6 +60,9 @@
 - [Software Deployment](Distributed/Deployment/README.md)
   - [Software Update](Distributed/Deployment/Update/README.md)
 - [Load Balancing](Distributed/Balancing/README.md)
+- [Tracing](Distributed/Tracing/README.md)
+  - [OpenTelemetry](Distributed/Tracing/OpenTelemetry/README.md)
+  - [Prometheus](Distributed/Tracing/Prometheus.md)
 
 ## [Blockchains](Blockchains/README.md)
 - [Currencies](Blockchains/Currencies/README.md)
