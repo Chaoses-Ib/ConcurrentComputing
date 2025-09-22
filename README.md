@@ -18,6 +18,8 @@
     - [Producer-consumer Problem](Concurrent/Synchronization/Problems/Producer-consumer.md)
     - [Dining Philosophers Problem](Concurrent/Synchronization/Problems/Dining%20Philosophers.md)
 - [Aliasing](Concurrent/Aliasing.md)
+- [Virtualization](Concurrent/Virtualization.md)
+  - [→Hardware Virtualization](https://github.com/Chaoses-Ib/ComputerHardware#virtualization)
 
 ## [Parallel Computing](Parallel/README.md)
 - [Algorithms](Parallel/Algorithms/README.md)

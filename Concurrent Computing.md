@@ -1,4 +1,6 @@
 # Concurrent Computing
+Concurrent computing is resource sharing, parallel computing is multiple-resource utilizing, distributed computing is resource sharing with multiple-resource utilizing.
+
 **Concurrent programming**, where different parts of a program execute independently, and **parallel programming**, where different parts of a program execute at the same time, are becoming increasingly important as more computers take advantage of their multiple processors.[^rust]
 
 <details><summary>Terminology</summary>
