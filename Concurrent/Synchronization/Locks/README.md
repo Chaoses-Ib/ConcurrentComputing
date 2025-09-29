@@ -7,6 +7,8 @@ A **lock** is just a variable, and thus to use one, you must declare a **lock va
 
 Locks provide some minimal amount of control over scheduling to programmers. In general, we view threads as entities created by the programmer but scheduled by the OS, in any fashion that the OS chooses. Locks yield some of that control back to the programmer; by putting a lock around a section of code, the programmer can guarantee that no more than a single thread can ever be active within that code. Thus locks help transform the chaos that is traditional OS scheduling into a more controlled activity.[^three]
 
+[multithreading - How efficient is locking an unlocked mutex? What is the cost of a mutex? - Stack Overflow](https://stackoverflow.com/questions/3652056/how-efficient-is-locking-an-unlocked-mutex-what-is-the-cost-of-a-mutex)
+
 ## Atomic read-write
 ### Dekker's Algorithm
 [Wikipedia](https://en.wikipedia.org/wiki/Dekker%27s_algorithm)
