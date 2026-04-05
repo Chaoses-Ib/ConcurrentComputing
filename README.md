@@ -53,11 +53,13 @@
   - [Benchmarks](Parallel/Performance/Benchmarks.md)
 
 ## [Distributed Computing](Distributed/README.md)
+- [CAP Theorem](Distributed/CAP.typ)
 - [Inter-Process Communication](Distributed/IPC/README.md)
 - [Remote Procedure Calls](Distributed/RPC/README.md)
   - [gRPC](Distributed/RPC/gRPC.md)
   - [Connect](Distributed/RPC/Connect.md)
   - [JSON-RPC](Distributed/RPC/JSON-RPC.md)
+- [Distributed Queues](Distributed/Queues/README.typ)
 - [Distributed Hash Table](Distributed/Distributed%20Hash%20Table.md)
 - [Software Deployment](Distributed/Deployment/README.md)
   - [Software Update](Distributed/Deployment/Update/README.md)
