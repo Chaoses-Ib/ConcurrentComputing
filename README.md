@@ -63,6 +63,7 @@
 - [Distributed Hash Table](Distributed/Distributed%20Hash%20Table.md)
 - [Software Deployment](Distributed/Deployment/README.md)
   - [Software Update](Distributed/Deployment/Update/README.md)
+    - [Libraries](Distributed/Deployment/Update/Libraries.typ)
 - [Load Balancing](Distributed/Balancing/README.md)
 - [Tracing](Distributed/Tracing/README.md)
   - [OpenTelemetry](Distributed/Tracing/OpenTelemetry/README.md)
