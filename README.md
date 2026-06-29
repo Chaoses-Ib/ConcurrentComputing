@@ -68,6 +68,9 @@
 - [Tracing](Distributed/Tracing/README.md)
   - [OpenTelemetry](Distributed/Tracing/OpenTelemetry/README.md)
   - [Prometheus](Distributed/Tracing/Prometheus.md)
+- [Configuration Management](Distributed/Config/README.typ)
+  - [Ansible](Distributed/Config/Ansible/README.typ)
+  - [pyinfra](Distributed/Config/pyinfra/README.typ)
 
 ## [Blockchains](Blockchains/README.md)
 - [Currencies](Blockchains/Currencies/README.md)
