@@ -1,11 +1,15 @@
 #import "@local/ib:0.1.0": *
 #title[Analytics]
+#a-badge[https://en.wikipedia.org/wiki/Software_analytics]
 
 = Web
+#a-badge[https://en.wikipedia.org/wiki/Web_analytics]
+
 - #a[Umami: Privacy-Focused Web Analytics][https://umami.is/]
   - TS
 - #a[Plausible Analytics: Simple, privacy-friendly Google Analytics alternative][https://plausible.io/]
   #a-badge[https://github.com/plausible/analytics]
+  #a-badge[https://www.wappalyzer.com/technologies/analytics/plausible/]
   - Elixir
 - #a[Matomo: Privacy-first analytics you can trust][https://matomo.org/]
   #a-badge[https://github.com/matomo-org/matomo]

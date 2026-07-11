@@ -1,4 +1,5 @@
-# [OpenTelemetry](https://opentelemetry.io/)
+#import "@local/ib:0.1.0": *
+#title[#a[OpenTelemetry][https://opentelemetry.io/]]
 > OpenTelemetry is a CNCF open source project that provides comprehensive support for distributed tracing.
 
 [What is OpenTelemetry? | OpenTelemetry](https://opentelemetry.io/docs/what-is-opentelemetry/)
@@ -17,7 +18,9 @@
 
 > Prometheus is just metrics. The main argument for oTel is that instead of one proprietary vendor SDK or importing prometheus and jaeger and whatever you want to use for logging, just import oTel and all that will be done with a common / open data format. I still believe in that dream but it's clear that the whole project needs some time/resources to mature a bit more.
 
-## OpenTelemetry Protocol (OTLP)
+#a[PromLabs | Blog - Why I recommend native Prometheus instrumentation over OpenTelemetry][https://promlabs.com/blog/2025/07/17/why-i-recommend-native-prometheus-instrumentation-over-opentelemetry/]
+
+= OpenTelemetry Protocol (OTLP)
 Not to be confused with OLTP.
 
 - Transport
@@ -59,21 +62,21 @@ Not to be confused with OLTP.
 
     - [logs_service](https://github.com/open-telemetry/opentelemetry-proto/blob/main/opentelemetry/proto/collector/logs/v1/logs_service.proto)
 
-## [Rust](https://opentelemetry.io/docs/languages/rust/)
+= #a[Rust][https://opentelemetry.io/docs/languages/rust/]
 - [opentelemetry\_otlp](https://docs.rs/opentelemetry-otlp/latest/opentelemetry_otlp/)
   - [opentelemetry\_http](https://docs.rs/opentelemetry-http/latest/opentelemetry_http/)
   - > For optimal performance, a batch exporting processor is recommended as the simple processor will export each span synchronously on dropping, and is only good for test/debug purposes.
 
 - [tokio-rs/tracing-opentelemetry](https://github.com/tokio-rs/tracing-opentelemetry)
 
-## Backends
+= Backends
 - [Grafana Tempo: a high volume, minimal dependency distributed tracing backend.](https://github.com/grafana/tempo)
 - [grafana/docker-otel-lgtm: OpenTelemetry backend in a Docker image](https://github.com/grafana/docker-otel-lgtm)
 - SigNoz
 
   [OpenTelemetry UI - See What's Possible With OpenTelemetry data | SigNoz](https://signoz.io/blog/opentelemetry-ui/)
 
-## [Jaeger](https://www.jaegertracing.io/)
+= #a[Jaeger][https://www.jaegertracing.io/]
 [OpenTelemetry | Jaeger](https://www.jaegertracing.io/docs/1.21/deployment/opentelemetry/)
 > The future Jaeger backend components will be based on [OpenTelemetry collector](https://opentelemetry.io/docs/collector/) . This integration will make all OpenTelemetry Collector features available in the Jaeger backend components.
 
