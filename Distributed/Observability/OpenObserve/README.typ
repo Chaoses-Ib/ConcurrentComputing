@@ -95,6 +95,7 @@ If I can’t run it securely in production, what’s even the point of calling i
   #a[Distributed Tracing - OpenObserve Documentation][https://openobserve.ai/docs/features/distributed-tracing/]
 
 - Dashboards
+  - ECharts
 
 #a[Filter logs at source in otel collector][https://openobserve.ai/blog/filter-logs-at-source-in-otel-collector/]
 
